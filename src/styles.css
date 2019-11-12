@@ -1,1 +1,231 @@
-/* You can add global styles to this file, and also import other style files */
+ /* CSS Document */
+ 
+ * {
+     scroll-behavior: smooth;
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     list-style: none;
+     text-decoration: none;
+     font-size: 17px;
+     font-weight: 300;
+     color: #666;
+     outline: none !important;
+ }
+ 
+ header {
+     float: left;
+     width: 100%;
+     background: #45413e;
+     padding: 10px;
+ }
+ 
+ header a {
+     color: #fff;
+     padding: 10px 15px;
+ }
+ 
+ a:focus,
+ a:hover {
+     color: #ffffff;
+     text-decoration: none;
+ }
+ 
+ header .login-bar a:last-child {
+     border: 1px solid #fff;
+     border-radius: 6px;
+ }
+ 
+ header .login-bar a {
+     padding: 4px 6px;
+ }
+ 
+ section.main-content {
+     float: left;
+     width: 100%;
+ }
+ 
+ .main-heading {
+     padding: 40px 0;
+ }
+ 
+ section.main-content .main-heading h1 {
+     position: relative;
+     margin: 10px 0 30px 0;
+     padding-bottom: 30px;
+     font-weight: 400;
+ }
+ 
+ section.main-content .main-heading h1:before {
+     height: 2px;
+     width: 50px;
+     background: #39cb74;
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+ 
+ .enterprising-form {
+     float: left;
+     width: 100%;
+     background: #f9f9f9;
+     padding: 60px 0;
+     text-align: center;
+ }
+ 
+ .enterprising-form form {
+     width: 100%;
+     display: inline-block;
+     max-width: 600px;
+     margin: 0 auto;
+ }
+ 
+ .enterprising-form form label {
+     display: block;
+     width: 100%;
+     float: left;
+ }
+ 
+ .enterprising-form form label input,
+ .enterprising-form form label textarea {
+     width: 100%;
+     background: #efefef;
+     border: 1px solid #e0e0e0;
+     padding: 7px;
+     margin: 3px 0;
+     font-weight: 400;
+     color: #000;
+     border-radius: 4px;
+ }
+ 
+ .enterprising-form form label textarea {
+     min-height: 150px;
+ }
+ 
+ .enterprising-form form button.bg-success {
+     background: #39cb74;
+     border: 1px solid #39cb74;
+     width: 100%;
+     padding: 5px;
+     color: #fff;
+     border-radius: 4px;
+ }
+ 
+ .enterprising-form form button.bg-success:hover {
+     background: #22b25c;
+     border-color: #22b25c;
+ }
+ 
+ footer {
+     background: #393939;
+     float: left;
+     padding: 40px 0;
+     width: 100%;
+     position: relative;
+ }
+ 
+ footer h3 {
+     color: #fff;
+     margin: 0;
+     margin-bottom: 20px;
+ }
+ 
+ footer ul li {
+     margin: 5px 0;
+ }
+ 
+ footer ul li a {
+     color: #c4c0c0;
+     margin: 0;
+ }
+ 
+ footer ul li button.bg-primary {
+     border: 1px solid #fff;
+     padding: 2px;
+     border-radius: 4px;
+ }
+ 
+ footer button.bg-success {
+     background: #39cb74;
+     color: #fff;
+     border: 1px solid #39cb74;
+     padding: 18px;
+ }
+ 
+ footer button.bg-success:hover {
+     box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.36);
+ }
+ 
+ footer ol {
+     display: block;
+     margin-top: 30px;
+ }
+ 
+ footer ol li {
+     width: 36%;
+     float: left;
+     text-align: center;
+     padding-bottom: 5px;
+     position: relative;
+ }
+ 
+ footer ol li a i {
+     width: 60px;
+     color: #393939;
+     background: #fff;
+     padding: 18px;
+     border-radius: 50%;
+     text-align: center;
+     height: 60px;
+ }
+ 
+ footer ol li a i:before {
+     font-size: 26px;
+ }
+ 
+ footer ol li a:hover i {
+     background: #393939;
+     color: #fff;
+ }
+ 
+ footer ol li:before {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     width: 90%;
+     height: 1px;
+     background: #39cb74;
+     left: 50%;
+     transform: translateX(-50%);
+ }
+ 
+ .form-row .invalid-feedback div,
+ .invalid-feedback div {
+     text-align: left;
+     text-transform: capitalize;
+     font-size: 14px;
+     color: red;
+     float: left;
+ }
+ 
+ @media only screen and (max-width: 991px) {
+     footer .col-md-3,
+     footer .col-md-2 {
+         text-align: center;
+         margin-top: 20px;
+     }
+     footer ol li {
+         display: inline-block;
+         float: none;
+     }
+     .login-bar {
+         display: block;
+         text-align: center;
+         margin-top: 18px;
+     }
+     header a {
+         padding: 10px;
+     }
+ }

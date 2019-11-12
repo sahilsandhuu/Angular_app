@@ -1,59 +1,131 @@
-<div class="card m-3">
-    <div class="card-body">
-        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-            <div class="form-row">
-                <div class="form-group col-5">
-                    <label>Name</label>
-                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
-                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-                        <div *ngIf="f.firstName.errors.required">Name is required</div>
-                    </div>
-                </div>
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
             </div>
-            <div class="form-group">
-                <label>Email</label>
-                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
-                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-                    <div *ngIf="f.email.errors.required">Email is required</div>
-                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
-                </div>
+            <div class="col-md-6 text-center">
+                <a href="">Solutions</a>
+                <a href="">Support</a>
+                <a href="">Partner</a>
             </div>
-            <div class="form-row">
-                <div class="form-group col">
-                    <label>Company Name</label>
-                    <input type="text" formControlName="c_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.c_name.errors }" />
-                    <div *ngIf="submitted && f.c_name.errors" class="invalid-feedback">
-                        <div *ngIf="f.c_name.errors.required">company is required</div>
-                    </div>
-                </div>
-                <div class="form-group col">
-                    <label>Country</label>
-                    <input type="text" formControlName="country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" />
-                    <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
-                        <div *ngIf="f.country.errors.required">country is required</div>
-                    </div>
-                </div>
-                <div class="form-group col">
-                    <label>Website</label>
-                    <input type="text" formControlName="website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" />
-                    <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
-                        <div *ngIf="f.website.errors.required">website is required</div>
-                    </div>
-                </div>
-                <div class="form-group col">
-                    <label>Enter your website urls</label>
-                    <input type="text" formControlName="urls" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.urls.errors }" />
-                    <div *ngIf="submitted && f.urls.errors" class="invalid-feedback">
-                        <div *ngIf="f.urls.errors.required">url is required</div>
-                    </div>
-                </div>
+            <div class="col-md-3 text-right login-bar">
+                <a href="">Sign in</a>
+                <a href="">Try for free</a>
             </div>
-            <div class="text-center">
-                <button class="btn btn-primary mr-1">Send</button>
-            </div>
-        </form>
+        </div>
     </div>
-</div>
+</header>
 
+
+<section class="main-content">
+    <div class="main-heading">
+        <div class="container">
+            <h1 class="text-center">Enterprise Plan</h1>
+            <p class="text-center">Fill Out These Details to get Started with our Enterprise Plan</p>
+        </div>
+    </div>
+    <div class="enterprising-form">
+        <div class="container">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="form-row">
+                    <div class="form-group col-5">
+
+                        <label><input placeholder="Your Name" type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" /></label>
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">Name is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+
+                    <label><input  placeholder="Your Email" type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" /></label>
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col">
+
+                        <label><input placeholder="Company Name" type="text" formControlName="c_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.c_name.errors }" /></label>
+                        <div *ngIf="submitted && f.c_name.errors" class="invalid-feedback">
+                            <div *ngIf="f.c_name.errors.required">company is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+
+                        <label><input  placeholder="Country" type="text" formControlName="country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" /></label>
+                        <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                            <div *ngIf="f.country.errors.required">country is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+
+                        <label> <input placeholder="Website Name" type="text" formControlName="website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" /></label>
+                        <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+                            <div *ngIf="f.website.errors.required">website is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+
+                        <label><textarea placeholder="Enter all your website URL (one Url per row)"  formControlName="urls" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.urls.errors }"></textarea></label>
+                        <div *ngIf="submitted && f.urls.errors" class="invalid-feedback">
+                            <div *ngIf="f.urls.errors.required">url is required</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button class="bg-success">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <div class="col-md-3">
+            <img src="" alt="footer-logo" />
+        </div>
+        <div class="col-md-2">
+            <h3>Product</h3>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">What is GDPR</a></li>
+                <li><a href="">What is CCPA</a></li>
+                <li><a href="">What is LGPD	</a></li>
+                <li><a href="">Free GDPR Audit</a></li>
+                <li><a href="">IAB</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <h3>Alternative</h3>
+            <ul>
+                <li><a href="">Cokiebot</a></li>
+                <li><a href="">Cookiepro</a></li>
+                <li><a href="">lubenda</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Support</a></li>
+                <li><a href="">Reseller</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Terms of Use</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><button class="bg-primary">Do not sell</button></li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <button class="bg-success">Request a Demo</button>
+            <ol>
+                <li><a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            </ol>
+        </div>
+    </div>
+</footer>
 
 <router-outlet></router-outlet>
