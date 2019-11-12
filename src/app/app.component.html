@@ -1,0 +1,59 @@
+<div class="card m-3">
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group col-5">
+                    <label>Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">Name is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                    <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label>Company Name</label>
+                    <input type="text" formControlName="c_name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.c_name.errors }" />
+                    <div *ngIf="submitted && f.c_name.errors" class="invalid-feedback">
+                        <div *ngIf="f.c_name.errors.required">company is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Country</label>
+                    <input type="text" formControlName="country" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.country.errors }" />
+                    <div *ngIf="submitted && f.country.errors" class="invalid-feedback">
+                        <div *ngIf="f.country.errors.required">country is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Website</label>
+                    <input type="text" formControlName="website" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.website.errors }" />
+                    <div *ngIf="submitted && f.website.errors" class="invalid-feedback">
+                        <div *ngIf="f.website.errors.required">website is required</div>
+                    </div>
+                </div>
+                <div class="form-group col">
+                    <label>Enter your website urls</label>
+                    <input type="text" formControlName="urls" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.urls.errors }" />
+                    <div *ngIf="submitted && f.urls.errors" class="invalid-feedback">
+                        <div *ngIf="f.urls.errors.required">url is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>
